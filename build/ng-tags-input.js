@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2016 Michael Benford
  * License: MIT
  *
- * Generated at 2016-06-08 17:33:21 -0400
+ * Generated at 2016-06-08 21:46:35 -0400
  */
 (function() {
 'use strict';
@@ -612,7 +612,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
         var self = {}, getDifference, lastPromise, getTagId;
 
         getTagId = function() {
-            if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
+            if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
                 return options.tagsInput.keyProperty || options.tagsInput.displayProperty;
             } else {
                 return null;
@@ -621,7 +621,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
 
         getDifference = function(array1, array2) {
             return array1.filter(function(item) {
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
+                if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
                     return !tiUtil.findInObjectArray(array2, item, getTagId(), function(a, b) {
                         if (options.tagsInput.replaceSpacesWithDashes) {
                             a = tiUtil.replaceSpacesWithDashes(a);
@@ -670,7 +670,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
                     return;
                 }
 
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject){
+                if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)){
                     items = tiUtil.makeObjectArray(items.data || items, getTagId());
                 }
 
@@ -795,7 +795,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
             };
 
             scope.track = function(item) {
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
+                if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
                     return item[options.tagsInput.keyProperty || options.tagsInput.displayProperty];
                 } else {
                     return item;
@@ -907,7 +907,7 @@ tagsInput.directive('tiAutocompleteMatch', ["$sce", "tiUtil", function($sce, tiU
                 return $sce.trustAsHtml(text);
             };
             scope.$getDisplayText =  function() {
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
+                if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
                   return tiUtil.safeToString(scope.data[options.displayProperty || options.tagsInput.displayProperty]);
                 } else {
                   return tiUtil.safeToString(scope.data);
