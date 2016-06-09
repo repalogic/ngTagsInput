@@ -5,11 +5,7 @@
  * Copyright (c) 2013-2016 Michael Benford
  * License: MIT
  *
-<<<<<<< HEAD
- * Generated at 2016-06-08 21:46:35 -0400
-=======
- * Generated at 2016-06-08 17:33:21 -0400
->>>>>>> 5d95f003116aad6c6f7a2f8416b5073d5aeda636
+ * Generated at 2016-06-08 21:47:58 -0400
  */
 (function() {
 'use strict';
@@ -616,11 +612,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
         var self = {}, getDifference, lastPromise, getTagId;
 
         getTagId = function() {
-<<<<<<< HEAD
             if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
-=======
-            if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
->>>>>>> 5d95f003116aad6c6f7a2f8416b5073d5aeda636
                 return options.tagsInput.keyProperty || options.tagsInput.displayProperty;
             } else {
                 return null;
@@ -629,11 +621,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
 
         getDifference = function(array1, array2) {
             return array1.filter(function(item) {
-<<<<<<< HEAD
                 if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
-=======
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
->>>>>>> 5d95f003116aad6c6f7a2f8416b5073d5aeda636
                     return !tiUtil.findInObjectArray(array2, item, getTagId(), function(a, b) {
                         if (options.tagsInput.replaceSpacesWithDashes) {
                             a = tiUtil.replaceSpacesWithDashes(a);
@@ -682,11 +670,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
                     return;
                 }
 
-<<<<<<< HEAD
                 if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)){
-=======
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject){
->>>>>>> 5d95f003116aad6c6f7a2f8416b5073d5aeda636
                     items = tiUtil.makeObjectArray(items.data || items, getTagId());
                 }
 
@@ -811,11 +795,7 @@ tagsInput.directive('autoComplete', ["$document", "$timeout", "$sce", "$q", "tag
             };
 
             scope.track = function(item) {
-<<<<<<< HEAD
                 if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
-=======
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
->>>>>>> 5d95f003116aad6c6f7a2f8416b5073d5aeda636
                     return item[options.tagsInput.keyProperty || options.tagsInput.displayProperty];
                 } else {
                     return item;
@@ -927,11 +907,7 @@ tagsInput.directive('tiAutocompleteMatch', ["$sce", "tiUtil", function($sce, tiU
                 return $sce.trustAsHtml(text);
             };
             scope.$getDisplayText =  function() {
-<<<<<<< HEAD
                 if (options.tagsInput.itemIsObject || !angular.isDefined(options.tagsInput.itemIsObject)) {
-=======
-                if (options.tagsInput.itemIsObject || !options.tagsInput.itemIsObject) {
->>>>>>> 5d95f003116aad6c6f7a2f8416b5073d5aeda636
                   return tiUtil.safeToString(scope.data[options.displayProperty || options.tagsInput.displayProperty]);
                 } else {
                   return tiUtil.safeToString(scope.data);
